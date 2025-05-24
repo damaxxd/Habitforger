@@ -1,0 +1,2 @@
+-dontobfuscate
+-keep class com.gr6.grit** { *; }
