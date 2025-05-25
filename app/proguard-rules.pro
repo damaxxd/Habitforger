@@ -1,2 +1,2 @@
 -dontobfuscate
--keep class com.gr6.grit** { *; }
+-keep class com.group6.habitforger** { *; }

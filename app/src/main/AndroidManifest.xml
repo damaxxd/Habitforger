@@ -18,26 +18,26 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Grit"
-        android:name=".app.GritApp"
+        android:theme="@style/Theme.HB"
+        android:name=".app.HBApp"
         tools:targetApi="31">
         <activity
             android:name=".app.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Grit.Splash">
+            android:theme="@style/Theme.HB.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".core.domain.NotificationReceiver" />
-        <receiver android:name=".core.domain.BootReceiver"
+        <receiver android:name=".core.data.NotificationReceiver" />
+        <receiver android:name=".core.data.BootReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".core.presentation.widgets.GritWidgetReceiver"
+        <receiver android:name=".core.presentation.widgets.HBWidgetReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>

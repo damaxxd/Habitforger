@@ -7,16 +7,16 @@ plugins {
     alias(libs.plugins.aboutLibraries)
 }
 
-val appName = "Habitforger"
-val appVersionCode = 2000
-val appVersionName = "2.0.0"
+val appName = "Habit Forger"
+val appVersionCode = 1000
+val appVersionName = "1.0.0"
 
 android {
-    namespace = "com.gr6.habitforger"
+    namespace = "com.group6.habitforger"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.gr6.habitforger"
+        applicationId = "com.group6.habitforger"
         minSdk = 29
         targetSdk = 35
         versionCode = appVersionCode
@@ -37,6 +37,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
+            isDebuggable = true
         }
 
         create("beta"){
@@ -52,7 +54,7 @@ android {
         }
 
         debug {
-            resValue("string", "app_name", "$appName")
+            resValue("string", "app_name", "$appName Debug")
             applicationIdSuffix = ".debug"
         }
     }
@@ -82,7 +84,7 @@ android {
 
 aboutLibraries {
     // Remove the "generated" timestamp to allow for reproducible builds; from kaajjo/LibreSudoku
-    excludeFields = arrayOf("generated")
+    export.excludeFields.add("generated")
 }
 
 dependencies {

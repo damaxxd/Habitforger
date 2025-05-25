@@ -11,7 +11,7 @@
     <string name="add_task">Add Task</string>
     <string name="add_urgent_task">Add Urgent</string>
     <string name="add_habit">Add New Habit</string>
-    <string name="update">Edit</string>
+    <string name="update">Save</string>
     <string name="update_description">Edit Description</string>
     <string name="delete">Delete</string>
     <string name="task_deleted">Task Deleted</string>
@@ -24,7 +24,7 @@
     <string name="mark_done">Mark Done</string>
     <string name="days_completed">Days Completed</string>
     <string name="streak">Current Streak</string>
-    <string name="best_streak">Best Streak: %1$d</string>
+    <string name="best_streak">Best Streak</string>
     <string name="since">Since</string>
     <string name="goals">Goals</string>
     <string name="settings">Settings</string>
@@ -35,6 +35,7 @@
     <string name="days_ago_format">%1$d Day(s) ago…</string>
     <string name="too_long">Too Long</string>
     <string name="edit_task">Edit Task</string>
+    <string name="edit_done">Save</string>
     <string name="tasks_guide_1">Tap to mark as done</string>
     <string name="tasks_guide_2">Tap and Hold to edit</string>
     <string name="habits_guide_1">Tap to Mark as done</string>
@@ -52,9 +53,9 @@
     <string name="add">Add Something</string>
     <string name="about">About App</string>
     <string name="select_habit">Select Habit</string>
-    <string name="habit_map">Habit Map</string>
+    <string name="habit_map">Habit Heat Map</string>
     <string name="habit_stats">Habit Stats</string>
-    <string name="look_and_feel">Look and Feel</string>
+    <string name="theme">Theme</string>
     <string name="use_system_theme">Use System Theme</string>
     <string name="use_system_theme_desc">Use System theme as app theme</string>
     <string name="use_dark_theme">Use Dark Theme</string>
@@ -63,11 +64,11 @@
     <string name="select_seed">Select Seed color</string>
     <string name="select_seed_desc">Select color to generate palette from</string>
     <string name="palette_style">Palette Style</string>
-    <string name="look_and_feel_desc">Customise the app in various ways</string>
+    <string name="theme_desc">Customise the app in various ways</string>
     <string name="backup">Backup</string>
     <string name="backup_desc">Export or Restore your tasks and habits</string>
     <string name="export">Export data</string>
-    <string name="export_desc">All data exported to Downloads/Habitforger</string>
+    <string name="export_desc">All data exported to Downloads/HB</string>
     <string name="restore">Restore</string>
     <string name="restore_desc">Restore tasks and habits from selected file</string>
     <string name="choose_file">Choose file</string>
@@ -87,6 +88,7 @@
     <string name="pause_notifications_desc">Pause all app notifications</string>
     <string name="overview">Overview</string>
     <string name="started_on">Started On</string>
-    <string name="weekly_graph">Weekly Comparision</string>
+    <string name="weekly_graph">Weekly Comparison</string>
     <string name="not_enough_data">Not enough data</string>
+    <string name="sponsor">Sponsor</string>
 </resources>

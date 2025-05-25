@@ -25,6 +25,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Habitforger"
+rootProject.name = "HB"
 include(":app")
  
