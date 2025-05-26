@@ -6,6 +6,7 @@
     <string name="material_theme">Material You Theme</string>
     <string name="clear_preference">Clear Tasks</string>
     <string name="done">Done</string>
+    <string name="pick">Pick</string>
     <string name="empty">Swipe down to add new</string>
     <string name="urgent">Urgent</string>
     <string name="add_task">Add Task</string>
@@ -56,9 +57,6 @@
     <string name="habit_map">Habit Heat Map</string>
     <string name="habit_stats">Habit Stats</string>
     <string name="theme">Theme</string>
-    <string name="use_system_theme">Use System Theme</string>
-    <string name="use_system_theme_desc">Use System theme as app theme</string>
-    <string name="use_dark_theme">Use Dark Theme</string>
     <string name="use_amoled">Amoled palette</string>
     <string name="use_amoled_desc">Best experienced on AMOLED displays</string>
     <string name="select_seed">Select Seed color</string>
@@ -68,7 +66,7 @@
     <string name="backup">Backup</string>
     <string name="backup_desc">Export or Restore your tasks and habits</string>
     <string name="export">Export data</string>
-    <string name="export_desc">All data exported to Downloads/HB</string>
+    <string name="export_desc">All data exported to Download/HB</string>
     <string name="restore">Restore</string>
     <string name="restore_desc">Restore tasks and habits from selected file</string>
     <string name="choose_file">Choose file</string>

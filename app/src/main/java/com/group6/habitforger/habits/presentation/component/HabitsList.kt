@@ -187,7 +187,7 @@ fun HabitsList(
                     AnimatedVisibility(
                         visible = state.habitsWithStatuses.isEmpty()
                     ) {
-                        Text(text = stringResource(id = R.string.add_habit))
+                        Text(text = stringResource(id = R.string.done))
                     }
                 }
             }
@@ -267,7 +267,7 @@ fun HabitsList(
                 },
                 enabled = newHabitName.isNotBlank() && newHabitDescription.isNotBlank() && newHabitName.length < 20 && newHabitDescription.length < 50,
             ) {
-                Text(text = stringResource(id = R.string.add_habit))
+                Text(text = stringResource(id = R.string.done))
             }
         }
     }

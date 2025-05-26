@@ -378,7 +378,7 @@ fun TaskList(
                 enabled = newTask.isNotEmpty() && newTask.length <= 100
             ) {
                 Text(
-                    text = stringResource(id = R.string.add_task),
+                    text = stringResource(id = R.string.update),
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.Bold,
                 )

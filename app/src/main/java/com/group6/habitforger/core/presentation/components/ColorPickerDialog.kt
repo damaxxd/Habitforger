@@ -76,7 +76,7 @@ fun ColorPickerDialog(
                 }
             ) {
                 Text(
-                    text = stringResource(R.string.done),
+                    text = stringResource(R.string.pick),
                     modifier = Modifier.fillMaxWidth(),
                     textAlign = TextAlign.Center
                 )

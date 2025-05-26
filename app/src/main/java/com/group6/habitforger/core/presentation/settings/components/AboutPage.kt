@@ -118,6 +118,33 @@ fun AboutPage(
                     }
                 }
             }
+
+            item {
+                Card(
+                    shape = MaterialTheme.shapes.extraLarge,
+                    modifier = Modifier.padding(16.dp),
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .padding(20.dp)
+                            .fillMaxWidth(),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = "TÊN CÁC THÀNH VIÊN TRONG NHÓM",
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                        Spacer(modifier = Modifier.size(8.dp))
+                        Text("Vũ Đức Kiên", style = MaterialTheme.typography.bodyMedium)
+                        Text("Trần Mình Hoàng", style = MaterialTheme.typography.bodyMedium)
+                        Text("Ngô Quang Minh", style = MaterialTheme.typography.bodyMedium)
+                    }
+                }
+            }
         }
     }
 }
