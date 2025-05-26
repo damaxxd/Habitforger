@@ -14,7 +14,4 @@ sealed interface SettingsRoutes {
 
     @Serializable
     data object Backup: SettingsRoutes
-
-    @Serializable
-    data object AboutLibraries: SettingsRoutes
 }

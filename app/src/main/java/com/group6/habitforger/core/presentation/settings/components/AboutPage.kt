@@ -36,16 +36,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.group6.habitforger.R
 import com.group6.habitforger.core.presentation.components.PageFill
-import compose.icons.FontAwesomeIcons
-import compose.icons.fontawesomeicons.Brands
-import compose.icons.fontawesomeicons.Solid
-import compose.icons.fontawesomeicons.brands.Bitcoin
-import compose.icons.fontawesomeicons.brands.Discord
-import compose.icons.fontawesomeicons.brands.Ethereum
-import compose.icons.fontawesomeicons.brands.Github
-import compose.icons.fontawesomeicons.solid.Coffee
-import compose.icons.fontawesomeicons.solid.Copy
-import kotlinx.coroutines.launch
+
+import com.group6.habitforger.core.presentation.getRandomLine
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.foundation.clickable
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.PreviewLightDark
+import com.group6.habitforger.core.presentation.theme.HBTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -57,6 +58,12 @@ fun AboutPage(
     val clipboard = LocalClipboard.current
     val uriHandler = LocalUriHandler.current
     val context = LocalContext.current
+
+    val memberNames = listOf("Vũ Đức Kiên", "Trần Mình Hoàng", "Ngô Quang Minh")
+    var line1 by remember { mutableStateOf(memberNames[0]) }
+    var line2 by remember { mutableStateOf(memberNames[1]) }
+    var line3 by remember { mutableStateOf(memberNames[2]) }
+
 
     Column(
         modifier = Modifier
@@ -108,12 +115,15 @@ fun AboutPage(
 
                         Text(
                             text = stringResource(R.string.app_name),
-                            style = MaterialTheme.typography.titleLarge
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.ExtraBold,
+                            textAlign = TextAlign.Center
                         )
 
                         Text(
                             text = context.packageName,
-                            style = MaterialTheme.typography.bodyLarge
+                            style = MaterialTheme.typography.bodyLarge,
+                            textAlign = TextAlign.Center
                         )
                     }
                 }
@@ -122,7 +132,14 @@ fun AboutPage(
             item {
                 Card(
                     shape = MaterialTheme.shapes.extraLarge,
-                    modifier = Modifier.padding(16.dp),
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .clickable {
+                            // Khi nhấn vào box, đổi cả 3 dòng text
+                            line1 = getRandomLine()
+                            line2 = getRandomLine()
+                            line3 = getRandomLine()
+                        },
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         contentColor = MaterialTheme.colorScheme.onPrimaryContainer
@@ -135,16 +152,28 @@ fun AboutPage(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "TÊN CÁC THÀNH VIÊN TRONG NHÓM",
-                            style = MaterialTheme.typography.titleMedium
+                            text = "CÁC THÀNH VIÊN TRONG NHÓM",
+                            fontWeight = FontWeight.ExtraBold,
+                            textAlign = TextAlign.Center,
+                            style = MaterialTheme.typography.titleLarge
                         )
                         Spacer(modifier = Modifier.size(8.dp))
-                        Text("Vũ Đức Kiên", style = MaterialTheme.typography.bodyMedium)
-                        Text("Trần Mình Hoàng", style = MaterialTheme.typography.bodyMedium)
-                        Text("Ngô Quang Minh", style = MaterialTheme.typography.bodyMedium)
+                        Text(line1, textAlign = TextAlign.Center, style = MaterialTheme.typography.bodyLarge)
+                        Text(line2, textAlign = TextAlign.Center, style = MaterialTheme.typography.bodyLarge)
+                        Text(line3, textAlign = TextAlign.Center, style = MaterialTheme.typography.bodyLarge)
                     }
                 }
             }
         }
+    }
+}
+
+@PreviewLightDark
+@Composable
+fun AboutPagePreview() {
+    HBTheme {
+        AboutPage(
+            onNavigateBack = {}
+        )
     }
 }

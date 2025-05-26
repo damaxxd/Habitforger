@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.aboutLibraries)
 }
 
 val appName = "Habit Forger"
@@ -82,11 +81,6 @@ android {
     }
 }
 
-aboutLibraries {
-    // Remove the "generated" timestamp to allow for reproducible builds; from kaajjo/LibreSudoku
-    export.excludeFields.add("generated")
-}
-
 dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.material3)
@@ -107,7 +101,6 @@ dependencies {
     implementation(libs.materialKolor)
     implementation(libs.colorpicker.compose)
     implementation(libs.androidx.datastore.preferences.core)
-    implementation(libs.aboutLibraries)
     implementation(libs.composeIcons.fontAwesome)
     implementation(libs.compose.charts)
     implementation(libs.calendar)

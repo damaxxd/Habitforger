@@ -25,6 +25,11 @@ import com.github.skydoves.colorpicker.compose.HsvColorPicker
 import com.github.skydoves.colorpicker.compose.rememberColorPickerController
 import com.group6.habitforger.R
 
+import androidx.compose.ui.tooling.preview.PreviewLightDark
+import com.group6.habitforger.core.presentation.settings.SettingsState
+import com.group6.habitforger.core.presentation.settings.components.ThemePage
+import com.group6.habitforger.core.presentation.theme.HBTheme
+
 // Color picker used app wide
 @Composable
 fun ColorPickerDialog(
@@ -82,5 +87,17 @@ fun ColorPickerDialog(
                 )
             }
         }
+    }
+}
+
+@PreviewLightDark
+@Composable
+fun ColorPickerDialogPreview() {
+    HBTheme {
+        ColorPickerDialog(
+            initialColor = Color(0xFFFFFFFF),
+            onSelect = {},
+            onDismiss = {}
+        )
     }
 }

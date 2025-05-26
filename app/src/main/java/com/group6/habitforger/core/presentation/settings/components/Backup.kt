@@ -30,6 +30,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import com.group6.habitforger.R
 import com.group6.habitforger.core.domain.backup.ExportState
@@ -37,6 +38,9 @@ import com.group6.habitforger.core.domain.backup.RestoreState
 import com.group6.habitforger.core.presentation.components.PageFill
 import com.group6.habitforger.core.presentation.settings.SettingsAction
 import com.group6.habitforger.core.presentation.settings.SettingsState
+import com.group6.habitforger.core.presentation.theme.HBTheme
+
+import com.group6.habitforger.core.presentation.theme.HBTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -171,5 +175,17 @@ fun Backup(
                 )
             }
         }
+    }
+}
+
+@PreviewLightDark
+@Composable
+fun BackupPreview() {
+    HBTheme {
+        Backup(
+            state = SettingsState(), // hoặc giá trị mặc định phù hợp với app của bạn
+            onAction = {},
+            onNavigateBack = {}
+        )
     }
 }

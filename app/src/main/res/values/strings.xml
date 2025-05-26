@@ -10,8 +10,10 @@
     <string name="empty">Swipe down to add new</string>
     <string name="urgent">Urgent</string>
     <string name="add_task">Add Task</string>
+    <string name="task_name">Task Name</string>
     <string name="add_urgent_task">Add Urgent</string>
     <string name="add_habit">Add New Habit</string>
+    <string name="habit_name">Habit Name</string>
     <string name="update">Save</string>
     <string name="update_description">Edit Description</string>
     <string name="delete">Delete</string>
@@ -25,7 +27,7 @@
     <string name="mark_done">Mark Done</string>
     <string name="days_completed">Days Completed</string>
     <string name="streak">Current Streak</string>
-    <string name="best_streak">Best Streak</string>
+    <string name="best_streak">Best Streak: %1$d</string>
     <string name="since">Since</string>
     <string name="goals">Goals</string>
     <string name="settings">Settings</string>

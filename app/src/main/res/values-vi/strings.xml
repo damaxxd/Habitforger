@@ -5,13 +5,15 @@
     <string name="tasks_title">Nhiệm Vụ Hàng Ngày</string>
     <string name="material_theme">Thiết kế Material You</string>
     <string name="clear_preference">Clear Tasks</string>
-    <string name="done">Thêm</string>
+    <string name="done">Xong</string>
     <string name="pick">Chọn</string>
     <string name="empty">Swipe down to add new</string>
     <string name="urgent">Urgent</string>
     <string name="add_task">Thêm Nhiệm Vụ</string>
+    <string name="task_name">Tên Nhiệm Vụ</string>
     <string name="add_urgent_task">Add Urgent</string>
-    <string name="add_habit">Tên Thói Quen</string>
+    <string name="add_habit">Thêm Thói Quen</string>
+    <string name="habit_name">Tên Thói Quen</string>
     <string name="update">Lưu</string>
     <string name="update_description">Sửa Mô Tả</string>
     <string name="delete">Xoá</string>

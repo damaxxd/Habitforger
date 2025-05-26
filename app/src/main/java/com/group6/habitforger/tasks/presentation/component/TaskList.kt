@@ -61,6 +61,11 @@ import com.group6.habitforger.tasks.presentation.TaskPageState
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 
+import androidx.compose.ui.tooling.preview.PreviewLightDark
+import com.group6.habitforger.core.presentation.settings.SettingsState
+import com.group6.habitforger.core.presentation.settings.components.ThemePage
+import com.group6.habitforger.core.presentation.theme.HBTheme
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TaskList(
@@ -355,7 +360,7 @@ fun TaskList(
                     }
                 ),
                 modifier = Modifier.focusRequester(focusRequester),
-                label = { Text(text = stringResource(id = R.string.add_task)) }
+                label = { Text(text = stringResource(id = R.string.task_name)) }
             )
 
             Button(
@@ -384,5 +389,17 @@ fun TaskList(
                 )
             }
         }
+    }
+}
+
+@PreviewLightDark
+@Composable
+fun TaskListPreview() {
+    HBTheme {
+        TaskList(
+            onAction = {},
+            state = TaskPageState(),
+            onNavigateToEditCategories ={}
+        )
     }
 }

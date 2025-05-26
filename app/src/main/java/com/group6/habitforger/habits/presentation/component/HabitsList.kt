@@ -187,7 +187,7 @@ fun HabitsList(
                     AnimatedVisibility(
                         visible = state.habitsWithStatuses.isEmpty()
                     ) {
-                        Text(text = stringResource(id = R.string.done))
+                        Text(text = stringResource(id = R.string.add_habit))
                     }
                 }
             }
@@ -223,7 +223,7 @@ fun HabitsList(
                     if (isHabitPresent()) {
                         Text(text = stringResource(id = R.string.habit_exists))
                     } else if (newHabitName.length <= 20) {
-                        Text(text = stringResource(id = R.string.add_habit))
+                        Text(text = stringResource(id = R.string.habit_name))
                     } else {
                         Text(text = stringResource(id = R.string.too_long))
                     }

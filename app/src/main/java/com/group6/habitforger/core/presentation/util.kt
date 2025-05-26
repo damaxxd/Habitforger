@@ -62,24 +62,23 @@ fun countCurrentStreak(dates: List<LocalDate>): Int {
 fun countBestStreak(dates: List<LocalDate>): Int {
     if (dates.isEmpty()) return 0
     val sortedDates = dates.sorted()
-    var maxConsecutive = 0
-    var currentConsecutive = 0
+    var maxStreak = 1
+    var currentStreak = 1
     for (i in 1 until sortedDates.size) {
         val previousDate = sortedDates[i - 1]
         val currentDate = sortedDates[i]
         if (ChronoUnit.DAYS.between(previousDate, currentDate) == 1L) {
-            currentConsecutive++
+            currentStreak++
+        } else if (ChronoUnit.DAYS.between(previousDate, currentDate) == 0L) {
+            // cùng ngày, bỏ qua
+            continue
         } else {
-            if (currentConsecutive > maxConsecutive) {
-                maxConsecutive = currentConsecutive
-            }
-            currentConsecutive = 1
+            maxStreak = maxOf(maxStreak, currentStreak)
+            currentStreak = 1
         }
     }
-    if (currentConsecutive > maxConsecutive) {
-        maxConsecutive = currentConsecutive
-    }
-    return maxConsecutive
+    maxStreak = maxOf(maxStreak, currentStreak)
+    return maxStreak
 }
 
 fun createNotificationChannel(context: Context) {

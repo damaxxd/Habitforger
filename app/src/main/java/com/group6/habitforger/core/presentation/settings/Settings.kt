@@ -14,10 +14,9 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.group6.habitforger.core.presentation.components.PageFill
-import com.group6.habitforger.core.presentation.settings.components.AboutLibraries
 import com.group6.habitforger.core.presentation.settings.components.AboutPage
 import com.group6.habitforger.core.presentation.settings.components.Backup
-import com.group6.habitforger.core.presentation.settings.components.LookAndFeelPage
+import com.group6.habitforger.core.presentation.settings.components.ThemePage
 import com.group6.habitforger.core.presentation.settings.components.RootPage
 import com.group6.habitforger.core.presentation.theme.HBTheme
 
@@ -62,7 +61,7 @@ fun Settings(
         }
 
         composable<SettingsRoutes.LookAndFeel> {
-            LookAndFeelPage(
+            ThemePage(
                 state = state,
                 onAction = onAction,
                 onNavigateBack = { navController.navigateUp() }
@@ -73,12 +72,6 @@ fun Settings(
             Backup(
                 state = state,
                 onAction = onAction,
-                onNavigateBack = { navController.navigateUp() }
-            )
-        }
-
-        composable<SettingsRoutes.AboutLibraries> {
-            AboutLibraries(
                 onNavigateBack = { navController.navigateUp() }
             )
         }
